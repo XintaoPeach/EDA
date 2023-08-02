@@ -6,7 +6,7 @@ import random
 def init_n(probability, dimension):
     data = []
     new = []
-    for j in range(dimension):
+    for x in range(dimension):
         for i in probability:
             if random.random() >= i:
                 data.append(1)
@@ -80,8 +80,8 @@ while now < time:
     P = []
     for i in range(len(new_data[0])):
         flag = 0
-        for j in range(len(new_data)):
-            flag += new_data[j][i]
+        for y in range(len(new_data)):
+            flag += new_data[y][i]
         # 得到新的概率模型
         flag = flag/len(new_data)
         P.append(flag)
@@ -94,4 +94,3 @@ while now < time:
 
 print(f"最优解为：{ most_f }")
 print(f"具体方案：{ most }")
-
